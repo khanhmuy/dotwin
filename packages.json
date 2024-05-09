@@ -31,9 +31,6 @@
 					"PackageIdentifier" : "CrystalDewWorld.CrystalDiskInfo"
 				},
 				{
-					"PackageIdentifier" : "CrystalDewWorld.CrystalDiskMark"
-				},
-				{
 					"PackageIdentifier" : "Git.Git"
 				},
 				{
@@ -152,6 +149,24 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerToys"
+				},
+				{
+					"PackageIdentifier": "HandBrake.HandBrake"
+				},
+				{
+					"PackageIdentifier": "Gyan.FFmpeg"
+				},
+				{
+					"PackageIdentifier": "yt-dlp.yt-dlp"
+				},
+				{
+					"PackageIdentifier": "AnyDeskSoftwareGmbH.AnyDesk"
+				},
+				{
+					"PackageIdentifier": "Vencord.Vesktop"
+				},
+				{
+					"PackageIdentifier": "LocalSend.LocalSend"
 				}
 			],
 			"SourceDetails" : 

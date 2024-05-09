@@ -30,7 +30,8 @@ Import-Module .\library\DebloatFunctions.psm1 -DisableNameChecking
 setup
 Write-Output "This is basically an automated version of WindowsToolbox, add or remove any functions that you want/don't want before running. You should have read the code beforehand anyway."
 Write-Output "It's shit but it (barely) works -me, some 2 years ago."
-Read-Host "Press enter to continue"
+Write-Output "This script assumes winget is present."
+Read-Host "Press enter to continue!"
 
 #Force TLS 1.2 for chocolatey support
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
