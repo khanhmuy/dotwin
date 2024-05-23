@@ -110,7 +110,7 @@ while ($true) {
             
             $terminalSettings = "C:\Users\$env:username\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
             Copy-Item $PSScriptRoot\configs\terminal\settings.json -Destination $terminalSettings
-            Copy-Item $PSScriptRoot\configs\pwsh\Microsoft.PowerShell_profile.psm1 -Destination $env:USERPROFILE\Documents\WindowsPowerShell
+            Copy-Item $PSScriptRoot\configs\pwsh\Microsoft.PowerShell_profile.ps1 -Destination $env:USERPROFILE\Documents\WindowsPowerShell
             Copy-Item $PSScriptRoot\configs\pwsh\candy_custom.omp.json -Destination $env:USERPROFILE
         }
         "6) Reboot" {
