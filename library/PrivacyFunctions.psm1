@@ -442,3 +442,17 @@ function DisableLocation {
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" -Name "DisableLocationScripting" -Type DWord -Value 1
     Write-Output "Done"
 }
+
+function DisableCrossDeviceClipboard {
+    Write-Output "Disabling cross-device clipboard..."
+    if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Microsoft\Windows\System") -ne $true) {New-Item "HKLM:\SOFTWARE\Microsoft\Windows\System" -force -ea SilentlyContinue};
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" -Name "AllowCrossDeviceClipboard" -Type DWord -Value 0
+    Write-Output "Done"
+}
+
+function DisableActivityFeed {
+    Write-Output "Disabling activity feed..."
+    if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Microsoft\Windows\System") -ne $true) {New-Item "HKLM:\SOFTWARE\Microsoft\Windows\System" -force -ea SilentlyContinue};
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" -Name "EnableActivityFeed" -Type DWord -Value 0
+    Write-Output "Done"
+}

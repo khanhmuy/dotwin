@@ -74,6 +74,8 @@ while ($true) {
             DisableTailoredExperiences
             DisableAdvertisingID
             DisableActivityHistory
+            DisableCrossDeviceClipboard
+            DisableActivityFeed
         }
         "3) Tweaks" {
             Write-Output "Applying tweaks..."
@@ -91,6 +93,7 @@ while ($true) {
             SetWinXMenuCMD
             EnableVerboseStartup
             EnableClassicMenu
+            EnableClipboardHistory
             Write-Output "Killing Explorer process..."
             taskkill.exe /F /IM "explorer.exe"
             Write-Output "Restarting Explorer..."

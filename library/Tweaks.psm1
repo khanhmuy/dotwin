@@ -251,3 +251,9 @@ function EnableClassicBatteryFlyout {
     if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell") -ne $true) {  New-Item "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" -force -ea SilentlyContinue };
     New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell' -Name 'UseWin32BatteryFlyout' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
 }
+
+function EnableClipboardHistory {
+    Write-Output "Enabling clipboard history..."
+    if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Microsoft\Windows\System") -ne $true) {New-Item "HKLM:\SOFTWARE\Microsoft\Windows\System" -force -ea SilentlyContinue};
+    New-ItemProperty -LiteralPath "HKLM:\SOFTWARE\Microsoft\Windows\System" -Name "AllowClipboardHistory" -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+}
