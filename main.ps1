@@ -103,7 +103,7 @@ while ($true) {
         }
         "4) Install programs" {
             Write-Output "Installing apps..."
-            winget install --accept-package-agreements --ignore-unavailable --ignore-versions -e .\packages.json
+            winget install --accept-package-agreements --ignore-unavailable --ignore-versions --accept-package-agreements --ignore-warnings -e .\packages.json
             refreshenv
         }
         "5) Install configs" {

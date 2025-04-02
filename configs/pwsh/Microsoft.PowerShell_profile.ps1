@@ -9,3 +9,7 @@ function gh {
 	Set-Location $env:USERPROFILE\Documents\gh
 }
 Set-Alias -name ghub -value gh
+function btop{
+	btop4win
+}
+Set-Alias -name btop -value btop
